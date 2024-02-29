@@ -1,0 +1,30 @@
+<div
+  class="max-w-full flex justify-between bg-teal-500 rounded-lg dark:bg-violet-300"
+>
+  <p-button
+    (click)="sidebarVisible = true"
+    icon="pi pi-bars"
+    styleClass="text-lg"
+  ></p-button>
+  <p-button (click)="darkMode()" class="rounded-lg">
+    <span *ngIf="!isDarkModeEnabled">
+      <fa-icon class="text-xl" [icon]="sunIcon"></fa-icon
+    ></span>
+    <span *ngIf="isDarkModeEnabled">
+      <fa-icon class="text-xl" [icon]="moonIcon"></fa-icon
+    ></span>
+  </p-button>
+</div>
+
+<!-- SIDE BAR -->
+<p-sidebar [(visible)]="sidebarVisible">
+  <h3>Sidebar</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  </p>
+</p-sidebar>
+<!-- MAIN CONTENT -->
+<app-product-list></app-product-list>

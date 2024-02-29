@@ -1,0 +1,28 @@
+<div
+  class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center p-10"
+>
+  <div class="w-64 h-auto" *ngFor="let tempProduct of products">
+    <div
+      class="border bg-gray-100 border-gray-100 w-72 p-2.5 flex flex-col items-center rounded-xl shadow-xl dark:bg-zinc-800 space-y-4"
+    >
+      <div class="w-full rounded-xl bg-transparent">
+        <a href="">
+          <img class="w-full" src="{{ tempProduct.imageUrl }}" alt="" />
+        </a>
+      </div>
+      <div
+        class="space-y-4 text-xl font-bold text-center text-gray-500 dark:text-white"
+      >
+        <div class="font-Inter line-clamp-1">
+          {{ tempProduct.name }}
+        </div>
+        <div class="">{{ tempProduct.unitPrice | currency : "USD" }}</div>
+      </div>
+      <p-button
+        icon="pi pi-shopping-cart"
+        label="Add to cart"
+        styleClass="mb-4"
+      ></p-button>
+    </div>
+  </div>
+</div>
