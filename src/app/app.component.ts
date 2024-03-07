@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
   toggleDarkMode(change: boolean) {
     this.darkClasses = change;
     this.isDarkModeEnabled = change;
-    console.log(change ? this.themes.dark : this.themes.light);
+    // console.log(change ? this.themes.dark : this.themes.light);
     this.appservice.switchTheme(change ? this.themes.dark : this.themes.light);
     localStorage.setItem('theme', change ? 'dark' : 'light');
   }

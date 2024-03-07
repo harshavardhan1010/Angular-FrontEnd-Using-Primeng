@@ -1,0 +1,8 @@
+<ng-container *ngIf="product">
+  <img src="{{ product.imageUrl }}" alt="" />
+  <div>{{ product.description }}</div>
+  <div>{{ product.unitPrice }}</div>
+  <p-button routerLink="/category/{{ categoryId }}" class="mt-5"
+    >Back to Product List</p-button
+  >
+</ng-container>

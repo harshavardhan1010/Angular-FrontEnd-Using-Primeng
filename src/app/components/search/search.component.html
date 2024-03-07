@@ -1,0 +1,17 @@
+<div class="flex justify-center items-center">
+  <input
+    pInputText
+    #myInput
+    type="text"
+    placeholder="Search for products"
+    class="p-2"
+    (keyup.enter)="doSearch(myInput.value)"
+  />
+  <button
+    pButton
+    icon=""
+    label="Search"
+    styleClass="bg-teal-600 dark:bg-violet-400 p-2.5 text-sm"
+    (onClick)="doSearch(myInput.value)"
+  ></button>
+</div>

@@ -1,11 +1,14 @@
 <div
   class="max-w-full flex justify-between bg-teal-500 rounded-lg dark:bg-violet-300"
 >
-  <p-button
-    (click)="sidebarVisible = true"
-    icon="pi pi-bars"
-    styleClass="text-lg"
-  ></p-button>
+  <div class="flex items-center space-x-3">
+    <p-button
+      (click)="sidebarVisible = true"
+      icon="pi pi-bars"
+      styleClass="text-xl"
+    ></p-button>
+    <app-search></app-search>
+  </div>
   <p-button (click)="darkMode()" class="rounded-lg">
     <span *ngIf="!isDarkModeEnabled">
       <fa-icon class="text-xl" [icon]="sunIcon"></fa-icon
@@ -18,13 +21,9 @@
 
 <!-- SIDE BAR -->
 <p-sidebar [(visible)]="sidebarVisible">
-  <h3>Sidebar</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.
-  </p>
+  <ng-template pTemplate="body">
+    <app-product-category></app-product-category>
+  </ng-template>
 </p-sidebar>
 <!-- MAIN CONTENT -->
-<app-product-list></app-product-list>
+<router-outlet></router-outlet>
