@@ -6,7 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PaginatorModule } from 'primeng/paginator';
+import { BadgeModule } from 'primeng/badge';
 const modules: any = [
+  BadgeModule,
   ButtonModule,
   BrowserModule,
   CommonModule,
@@ -14,6 +17,7 @@ const modules: any = [
   SidebarModule,
   CardModule,
   InputTextModule,
+  PaginatorModule,
 ];
 @NgModule({
   declarations: [],

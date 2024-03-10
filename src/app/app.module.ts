@@ -11,10 +11,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
 const routes: Routes = [
-  { path: 'products/:prodId/:catId', component: ProductDetailsComponent },
+  // { path: 'products/:prodId/:catId', component: ProductDetailsComponent },
+  {
+    path: 'products/:prodId/:catId/:pageNo',
+    component: ProductDetailsComponent,
+  },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'search/:keyword', component: ProductListComponent },
+  // { path: 'category/:id', component: ProductListComponent },
+  // { path: 'category/:id/:pageNo', component: ProductListComponent },
   { path: 'category/:id', component: ProductListComponent },
   { path: 'category', component: ProductListComponent },
   { path: 'products', component: ProductListComponent },
@@ -28,6 +35,7 @@ const routes: Routes = [
     ProductCategoryComponent,
     SearchComponent,
     ProductDetailsComponent,
+    CartStatusComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

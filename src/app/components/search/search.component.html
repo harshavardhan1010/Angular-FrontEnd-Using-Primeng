@@ -7,11 +7,10 @@
     class="p-2"
     (keyup.enter)="doSearch(myInput.value)"
   />
-  <button
-    pButton
+  <p-button
     icon=""
     label="Search"
-    styleClass="bg-teal-600 dark:bg-violet-400 p-2.5 text-sm"
+    styleClass="hidden sm:block"
     (onClick)="doSearch(myInput.value)"
-  ></button>
+  ></p-button>
 </div>
